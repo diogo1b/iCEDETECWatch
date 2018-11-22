@@ -17,7 +17,7 @@ class DetalleControladorInterfaceController: WKInterfaceController {
         imagen.setImageNamed("Image2")
         
     }
-    @IBOutlet var imaghen: WKInterfaceImage!
+    @IBOutlet var imagen: WKInterfaceImage!
     @IBOutlet var piso: WKInterfaceLabel!
     @IBOutlet var nombre: WKInterfaceLabel!
     @IBOutlet var Horario: WKInterfaceLabel!
