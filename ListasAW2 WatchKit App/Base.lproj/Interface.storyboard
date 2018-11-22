@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="ListasAW2_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="Ko8-Bu-6pz">
+                            <items>
+                                <label width="44" alignment="left" text="Piso" id="2JI-1O-2CG"/>
+                                <label alignment="left" text="Salón" textAlignment="left" id="tpb-dQ-sKG"/>
+                            </items>
+                        </group>
+                        <table alignment="left" id="9PL-Ja-GWl">
+                            <items>
+                                <tableRow identifier="renglones" id="EDB-Mt-mb8" customClass="controladorRenglon" customModule="ListasAW2_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="wqs-BR-2wc">
+                                        <items>
+                                            <label width="36" alignment="left" verticalAlignment="center" text="Label" id="0R5-Pg-7Zr"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="GmG-7W-xsG"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="agencias" destination="GmG-7W-xsG" id="dQ3-eM-5pP"/>
+                                        <outlet property="etiqueta" destination="0R5-Pg-7Zr" id="Pyz-jc-Non"/>
+                                        <segue destination="pEe-GE-7Ot" kind="push" id="XSk-ez-x9m"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="laTable" destination="9PL-Ja-GWl" id="8Ac-4l-dYT"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="215" y="225"/>
+        </scene>
+        <!--Detalle Controlador Interface Controller-->
+        <scene sceneID="VCV-CT-Gzy">
+            <objects>
+                <controller id="pEe-GE-7Ot" customClass="DetalleControladorInterfaceController" customModule="ListasAW2_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" id="CHw-04-sbI" userLabel="Piso"/>
+                        <label alignment="left" text="Label" id="qSx-sX-qhc" userLabel="Nombre"/>
+                        <label alignment="left" text="Label" id="9Cx-dw-ehz" userLabel="Horario"/>
+                        <imageView alignment="left" image="Image1" id="pZz-ff-dwH"/>
+                        <button width="1" alignment="left" title="Cambio" id="zMe-Vh-IgW">
+                            <connections>
+                                <action selector="cambiar" destination="pEe-GE-7Ot" id="SGL-oR-FJv"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="Horario" destination="9Cx-dw-ehz" id="5iP-IV-eaU"/>
+                        <outlet property="imagen" destination="pZz-ff-dwH" id="d1s-Xp-6Sh"/>
+                        <outlet property="nombre" destination="qSx-sX-qhc" id="jfq-Hn-p25"/>
+                        <outlet property="piso" destination="CHw-04-sbI" id="xLI-EC-Z3k"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="504" y="231"/>
+        </scene>
+    </scenes>
+</document>
