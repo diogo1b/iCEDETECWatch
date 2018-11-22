@@ -43,7 +43,6 @@ class InterfaceController: WKInterfaceController {
         let datos = try? Data(contentsOf: url!)
         
         nuevoArray = try! JSONSerialization.jsonObject(with: datos!) as? [Any]
-        print(nuevoArray ?? "hola")
         // Configure interface objects here.
     }
 

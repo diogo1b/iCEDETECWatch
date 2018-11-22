@@ -53,7 +53,7 @@
                         <label alignment="left" text="Label" id="CHw-04-sbI" userLabel="Piso"/>
                         <label alignment="left" text="Label" id="qSx-sX-qhc" userLabel="Nombre"/>
                         <label alignment="left" text="Label" id="9Cx-dw-ehz" userLabel="Horario"/>
-                        <imageView alignment="left" image="Image1" id="pZz-ff-dwH"/>
+                        <imageView height="61" alignment="left" image="Image1" id="pZz-ff-dwH"/>
                         <button width="1" alignment="left" title="Cambio" id="zMe-Vh-IgW">
                             <connections>
                                 <action selector="cambiar" destination="pEe-GE-7Ot" id="SGL-oR-FJv"/>
@@ -68,7 +68,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="504" y="231"/>
+            <point key="canvasLocation" x="504" y="238"/>
         </scene>
     </scenes>
 </document>

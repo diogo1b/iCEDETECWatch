@@ -12,17 +12,25 @@ import Foundation
 
 class DetalleControladorInterfaceController: WKInterfaceController {
 
+    var counter:Int=0
+    
     @IBAction func cambiar() {
-                
-        imagen.setImageNamed("Image2")
-        
+        if counter==0 {
+            imagen.setImageNamed("Panono101")
+            counter=1
+        } else {
+            imagen.setImageNamed("Gear101")
+            counter=0
+        }
     }
+    
     @IBOutlet var imagen: WKInterfaceImage!
     @IBOutlet var piso: WKInterfaceLabel!
     @IBOutlet var nombre: WKInterfaceLabel!
     @IBOutlet var Horario: WKInterfaceLabel!
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
         let s=context as! Salon
         let pisoS=s.piso
         let nombreS=s.nombre
@@ -30,8 +38,7 @@ class DetalleControladorInterfaceController: WKInterfaceController {
         piso.setText(pisoS)
         nombre.setText(nombreS)
         Horario.setText(horarioS)
-        
-        
+        imagen.setImageNamed("Gear101")
         
         // Configure interface objects here.
     }
